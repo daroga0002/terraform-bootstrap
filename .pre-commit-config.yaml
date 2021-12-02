@@ -3,6 +3,7 @@ repos:
     rev: v1.58.0 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
     hooks:
       - id: terraform_fmt
+      - id: terraform_validate
       - id: terraform_docs
       - id: terraform_tflint
         args:
@@ -20,7 +21,6 @@ repos:
           - '--args=--only=terraform_unused_required_providers'
           - '--args=--only=terraform_module_version'
           - '--args=--config=__GIT_WORKING_DIR__/.tflint.hcl'
-      - id: terraform_validate
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
