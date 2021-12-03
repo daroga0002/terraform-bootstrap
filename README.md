@@ -1,8 +1,8 @@
 # terraform-bootstrap
 
-This repository can be used as a template for repositories holding Terraform code.
+This repository can be used as a template for repositories carrying Terraform code.
 
-It hold a following configuration files which are usefull in developing terraform code:
+The repository holds the following configuration files, which help develop terraform code:
 
 * `.editroconfig` **->** EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. More about project under https://editorconfig.org/
 * `.pre-commit-config.yaml` **->** framework for managing and maintaining pre-commit git hooks. More about project under https://pre-commit.com/. In this config following hooks are implemented:
@@ -19,7 +19,7 @@ It hold a following configuration files which are usefull in developing terrafor
 
 ## Requirement
 
-To use configs which are attached here you require following tools installed on your environment:
+To use configs which are attached here, you require the following tools installed on your environment:
 
 * [tfenv](https://github.com/tfutils/tfenv)
 * [tflint](https://github.com/terraform-linters/tflint)
@@ -28,7 +28,7 @@ To use configs which are attached here you require following tools installed on 
 * [pre-commit](https://pre-commit.com/)
 * native support or plugin in your favourite IDE supporting [Editorconfig](https://editorconfig.org/)
 
-Simplest installation on Mac OS is just:
+The most straightforward installation on Mac OS is:
 
 ```bash
 brew install git pre-commit tflint tfenv terraform-docs
@@ -36,7 +36,7 @@ brew install git pre-commit tflint tfenv terraform-docs
 
 ## pre-commit
 
-`pre-commit` hooks are running before any `git commit` done into repository. To run `pre-commit` without commiting just run:
+`pre-commit` hooks run before any `git commit` is done into the repository. To run `pre-commit` without committing, just run:
 
 ```bash
 $ pre-commit run -a
@@ -49,9 +49,9 @@ Trim Trailing Whitespace.................................................Passed
 Check for merge conflicts................................................Passed
 ```
 
-`pre-commit` is checking all hooks and in case of `terraform_fmt` and `terraform_docs` hooks is also fixing all issues (overall result is failed but after second run all hooks should be passed).
+`pre-commit` is checking all hooks. In the case of `terraform_fmt` and `terraform_docs`, hooks also fix all issues (the overall result fails, but after rerunning, it should pass).
 
-If you want commit without triggering hooks you can make it using option [--no-verify](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks):
+If you want to commit without triggering hooks, you can make it using option [--no-verify](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks):
 
 ```bash
 git commit --no-verify
