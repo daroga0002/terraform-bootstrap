@@ -18,8 +18,8 @@ content: ""
 output:
   file: USAGE.md
   mode: replace
-  template: |-
-    {{ .Content }}   
+  template: |
+    {{ .Content }}
 
 output-values:
   enabled: false
