@@ -4,7 +4,7 @@ This repository can be used as a template for repositories carrying Terraform co
 
 The repository holds the following configuration files, which help develop terraform code:
 
-* `.editroconfig` **->** EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. More about project under https://editorconfig.org/
+* `.editorconfig` **->** EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs. More about project under https://editorconfig.org/
 * `.pre-commit-config.yaml` **->** framework for managing and maintaining pre-commit git hooks. More about project under https://pre-commit.com/. In this config following hooks are implemented:
   * `terraform_fmt` **->** used to rewrite Terraform configuration files to a canonical format and style. Using `terraform` command.
   * `terraform_validate` **->** validates the configuration files in a directory, referring only to the configuration and not accessing any remote services such as remote state, provider APIs, etc. Using `terraform` command.
