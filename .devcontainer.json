@@ -1,0 +1,29 @@
+{
+  "name": "daroga0002/terraform-bootstrap",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "github.vscode-pull-request-github",
+        "hashicorp.terraform"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.tabSize": 4,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": false,
+        "files.trimTrailingWhitespace": true
+      }
+    }
+  },
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/mickeahlinder/devcontainer-features/tfenv:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "installTerraformDocs": true
+    },
+    "ghcr.io/gvatsal60/dev-container-features/pre-commit:1": {}
+  }
+}
